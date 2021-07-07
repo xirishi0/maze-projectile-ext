@@ -733,28 +733,6 @@ namespace Bullet{
         _from.setVelocity(s*Math.cos(a), s*Math.sin(a))
         changeImg(_from)
     }
-    
-    /*
-    //% blockId=setHp block="修改%s=variables_get(sprite)的%k=sKind 以%d" 
-    //% group="特殊效果"
-    //%blockNamespace=弹射物 
-    //% d.defl=-1
-    //% weight=99
-    export function setHp(s: Sprite, k: sKind, d: number){
-        if(k == sKind.HP){
-            let c = <Character.Character>s
-            if(c.hpbar != undefined){
-                c.hpbar.value += d*c.def
-            }
-        }
-        else if(k == sKind.NUM){
-            //能破坏武器的弹射物
-            let w = <Weapon.Weapon>s
-            if(w.bulletNum != undefined){
-                w.bulletNum += d
-            }
-        }
-    }
 
     //%block
     //%group="行为/轨迹"
@@ -768,7 +746,7 @@ namespace Bullet{
             e = nearestPlayer(bullet, d)
         }
         else{
-            e = Enemy.nearestEnemy(bullet, d)
+            e = nearestEnemy(bullet, d)
         }
         if(e == null){
             let s = Helper.compSpeed(bullet)
@@ -788,16 +766,6 @@ namespace Bullet{
             }
         }, t)
     }
-    
-    function nearestPlayer(bullet: wave, d: number){
-        let playerDis = Helper.distance(bullet, Player.curPlayer)
-        let e = playerDis <= d ? Player.curPlayer : null
-        let servant = Enemy.nearestServant(bullet, d)
-        if(servant != null && Helper.distance(bullet, servant) < playerDis){
-            e = <Player.Player>(<Character.Character>servant)
-        }
-        return e
-    }
 
     //%block
     //%group="行为/轨迹"
@@ -812,7 +780,7 @@ namespace Bullet{
             // e = Helper.distance(bullet, Player.curPlayer) <= d ? Player.curPlayer : null
         }
         else{
-            e = Enemy.nearestEnemy(bullet, d)
+            e = nearestEnemy(bullet, d)
         }
         if(e != null){
             changeDir(bullet, e)
@@ -823,5 +791,45 @@ namespace Bullet{
         bullet.setVelocity(s*Math.cos(a), s*Math.sin(a))
         Bullet.changeImg(bullet)
     }
-    */
+
+
+    //------------- 自机狙需要的迷宫相关信息 -------------
+    export let curEnemyRoom: {[key: string]: Sprite; } = {} //迷宫怪物
+    export let curPlayer: Sprite //当前玩家
+
+    function nearestPlayer(bullet: wave, d: number){
+        let playerDis = Helper.distance(bullet, curPlayer)
+        let e = playerDis <= d ? curPlayer : null
+        let servant = nearestServant(bullet, d)
+        if(servant != null && Helper.distance(bullet, servant) < playerDis){
+            e = <Character.Character>servant
+        }
+        return e
+    }
+
+    export function nearestEnemy(s: Sprite, d: number = 2147483647){
+        let ret: Sprite = null
+        let mn = 2147483647
+        for(let key of Object.keys(curEnemyRoom)){
+            let t = Helper.distance(s, curEnemyRoom[key])
+            if(t <= d && t < mn){
+                mn = t
+                ret = curEnemyRoom[key]
+            }
+        }
+        return ret
+    }
+
+    export function nearestServant(s: Sprite, d: number = 2147483647){
+        let ret: Sprite = null
+        let mn = 2147483647
+        for(let ps of sprites.allOfKind(SpriteKind.PlayerServant)){
+            let t = Helper.distance(s, ps)
+            if(t <= d && t < mn){
+                mn = t
+                ret = <Sprite>ps
+            }
+        }
+        return ret
+    }
 }

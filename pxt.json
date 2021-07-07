@@ -1,0 +1,27 @@
+{
+    "name": "maze-projectile-ext",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "maze-character-ext": "github:xirishi0/maze-character-ext#v0.0.2"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "maze-projectile-ext.ts",
+        "SpriteKind-ext.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.4.45",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}

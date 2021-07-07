@@ -331,6 +331,7 @@ namespace Bullet{
     //%blockId=setPrismLW block="设置激光弹射物%b=variables_get(projectile) 长%l 宽%w 持续时间%t ms"
     //%l.defl=100 w.defl=3 t.defl=1000
     //%weight=77
+    //%inlineInputMode=inline
     export function setPrismLW(b:wave, l: number, w: number, t: number=1000){
         b.prismLength = l
         b.prismWidth = w

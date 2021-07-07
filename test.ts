@@ -1,6 +1,17 @@
 // 在此处测试；当此软件包作为插件使用时，将不会编译此软件包。
+function multishoot (sprite: Sprite, n: number, a: number, offset: number, delay: number, projectile: string, s: number, k: number, sadd1: number, sadd2: number) {
+    if (k > 0) {
+        for (let index2 = 0; index2 <= n; index2++) {
+            Bullet.shoot(sprite, projectile, sprite.x, sprite.y, a + index2 * (360 / n), s + index2 * sadd1)
+        }
+        Helper.after(delay, function () {
+            multishoot(sprite, n, a + offset, offset, delay, projectile, s + sadd2, k - 1, sadd1, sadd2)
+        })
+    }
+}
+
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    Bullet.shoot(mySprite, "子弹", mySprite.x, mySprite.y)
+    multishoot(mySprite, 6, 0, 45, 0.2, "子弹", 75, 2, 0, 0)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`

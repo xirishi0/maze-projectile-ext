@@ -793,9 +793,22 @@ namespace Bullet{
     }
 
 
+    //% blockId=setHp block="修改%s=variables_get(character)的HP 以%d" 
+    //% group="特殊效果"
+    //%blockNamespace=弹射物 
+    //% d.defl=-1
+    //% weight=99
+    export function setHp(s: Sprite, d: number){
+        let c = <Character.Character>s
+        if(c.hpbar != undefined){
+            c.hpbar.value += d*c.def
+        }
+    }
+
+
     //------------- 自机狙需要的迷宫相关信息 -------------
     export let curEnemyRoom: {[key: string]: Sprite; } = {} //迷宫怪物
-    export let curPlayer: Sprite //当前玩家
+    export let curPlayer: Sprite = null //当前玩家
 
     function nearestPlayer(bullet: wave, d: number){
         let playerDis = Helper.distance(bullet, curPlayer)

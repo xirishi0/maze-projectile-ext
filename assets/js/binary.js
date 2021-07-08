@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.45/---simulator","cdnUrl":"https://makecode.trafficmanager.cn","version":"0.0.2","target":"arcade","targetVersion":"1.4.45","repo":"xirishi0/maze-projectile-ext"}
-// total=1248618 new=10.05% cached=84.54% other=5.41%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.45/---simulator","cdnUrl":"https://makecode.trafficmanager.cn","version":"0.0.3","target":"arcade","targetVersion":"1.4.45","repo":"xirishi0/maze-projectile-ext"}
+// total=1248879 new=10.07% cached=84.52% other=5.41%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -397,7 +397,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P20708(s) {
+function _main___P30840(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -850,11 +850,11 @@ switch (step) {
     s.callLocIdx = 66; s.pc = 43; return s.tmp_1;
   case 43:
     r0 = s.retval;
-    globals.projectiles___6621 = (s.tmp_0);
+    globals.projectiles___28692 = (s.tmp_0);
     r0 = pxsim_Array__mk();
-    globals.overlapFunc___6623 = (r0);
+    globals.overlapFunc___28694 = (r0);
     r0 = pxsim_pxtrt.mkMap();
-    globals.curEnemyRoom___4035 = (r0);
+    globals.curEnemyRoom___30423 = (r0);
     s.tmp_0 = SpriteKind_create__P2149_mk(s);
     s.callLocIdx = 111; s.pc = 44; return s.tmp_0;
   case 44:
@@ -896,7 +896,7 @@ switch (step) {
   case 50:
     r0 = s.retval;
     globals.mySprite___4046 = (r0);
-    s.tmp_0 = Bullet_setProjectiles__P3957_mk(s);
+    s.tmp_0 = Bullet_setProjectiles__P28696_mk(s);
     r0 = pxsim_String_.mkEmpty();
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = inline__P8452;
@@ -907,13 +907,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P20708.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
-_main___P20708.continuations = [ 39,40,41,42 ]
+_main___P30840.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
+_main___P30840.continuations = [ 39,40,41,42 ]
 
-function _main___P20708_mk(s) {
+function _main___P30840_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P20708, depth: s.depth + 1,
+        parent: s, fn: _main___P30840, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1553,7 +1553,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = Bullet_setProjectile__P3958_mk(s);
+    s.tmp_0 = Bullet_setProjectile__P28704_mk(s);
     r0 = pxsim.image.ofBuffer(_hex8455);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = "子弹";
@@ -1612,7 +1612,7 @@ function inline__P8456_mk(s) {
 
 
 
-function Bullet_setProjectile__P3958(s) {
+function Bullet_setProjectile__P28704(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1629,7 +1629,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Helper_setSprite__P3848_mk(s);
-    s.tmp_0.arg0 = globals.projectiles___6621;
+    s.tmp_0.arg0 = globals.projectiles___28692;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.tmp_0.arg3 = s.arg2;
@@ -1640,12 +1640,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_setProjectile__P3958.info = {"start":859,"length":143,"line":31,"column":4,"endLine":33,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"setProjectile","argumentNames":["img","name","cb"]}
+Bullet_setProjectile__P28704.info = {"start":859,"length":143,"line":31,"column":4,"endLine":33,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"setProjectile","argumentNames":["img","name","cb"]}
 
-function Bullet_setProjectile__P3958_mk(s) {
+function Bullet_setProjectile__P28704_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_setProjectile__P3958, depth: s.depth + 1,
+        parent: s, fn: Bullet_setProjectile__P28704, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2695,7 +2695,7 @@ function helpers_arrayJoin__P102_mk(s) {
 
 
 
-function Bullet_setProjectiles__P3957(s) {
+function Bullet_setProjectiles__P28696(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2705,9 +2705,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.f___6629 = undefined;
-    s.unnamed110___U1 = undefined;
-    s.unnamed111___U2 = undefined;
+    s.f___28701 = undefined;
+    s.unnamed262___U1 = undefined;
+    s.unnamed263___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -2719,45 +2719,45 @@ switch (step) {
     s.callLocIdx = 67; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.f___6629 = (undefined);
-    s.unnamed110___U1 = (globals.overlapFunc___6623);
-    s.unnamed111___U2 = (0);
+    s.f___28701 = (undefined);
+    s.unnamed262___U1 = (globals.overlapFunc___28694);
+    s.unnamed263___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed111___U2;
-    r0 = pxsim_Array__length(s.unnamed110___U1);
+    s.tmp_0 = r0 = s.unnamed263___U2;
+    r0 = pxsim_Array__length(s.unnamed262___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed110___U1, s.unnamed111___U2);
-    s.f___6629 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed262___U1, s.unnamed263___U2);
+    s.f___28701 = (r0);
     s.tmp_2 = lambda_1_mk(s);
-    s.tmp_2.argL = s.f___6629;
+    s.tmp_2.argL = s.f___28701;
     setupLambda(s.tmp_2, s.tmp_2.argL);
     s.callLocIdx = 68; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
-    r0 = (s.unnamed111___U2 + 1);
-    s.unnamed111___U2 = (r0);
+    r0 = (s.unnamed263___U2 + 1);
+    s.unnamed263___U2 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed110___U1 = (undefined);
+    s.unnamed262___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_setProjectiles__P3957.info = {"start":412,"length":137,"line":14,"column":4,"endLine":19,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"setProjectiles","argumentNames":["name","cb"]}
+Bullet_setProjectiles__P28696.info = {"start":412,"length":137,"line":14,"column":4,"endLine":19,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"setProjectiles","argumentNames":["name","cb"]}
 
-function Bullet_setProjectiles__P3957_mk(s) {
+function Bullet_setProjectiles__P28696_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_setProjectiles__P3957, depth: s.depth + 1,
+        parent: s, fn: Bullet_setProjectiles__P28696, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  f___6629: undefined,
-  unnamed110___U1: undefined,
-  unnamed111___U2: undefined,
+  f___28701: undefined,
+  unnamed262___U1: undefined,
+  unnamed263___U2: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -5097,7 +5097,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    s.tmp_1 = Bullet_shoot__P3960_mk(s);
+    s.tmp_1 = Bullet_shoot__P28716_mk(s);
     s.tmp_1.arg0 = s.arg0;
     s.tmp_1.arg1 = s.arg5;
     s.tmp_2 = Sprite_x__P2045_mk(s);
@@ -5739,7 +5739,7 @@ function Sprite_x__P2045_mk(s) {
 
 
 
-function Bullet_shoot__P3960(s) {
+function Bullet_shoot__P28716(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -5749,10 +5749,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.bullet___6650 = undefined;
-    s.b___6651 = undefined;
-    s.dir___6686 = undefined;
-    s.atc___6747 = undefined;
+    s.bullet___28725 = undefined;
+    s.b___28726 = undefined;
+    s.dir___28764 = undefined;
+    s.atc___28825 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -5764,11 +5764,11 @@ switch (step) {
       s.arg7 = (s.lambdaArgs[7]);
       s.lambdaArgs = null;
     }
-    r0 = globals.projectiles___6621.fields["v"];
+    r0 = globals.projectiles___28692.fields["v"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, s.arg1);
-    s.b___6651 = (r0);
-    r0 = (s.b___6651 == undefined);
+    s.b___28726 = (r0);
+    r0 = (s.b___28726 == undefined);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -5802,7 +5802,7 @@ switch (step) {
   case 1:
   case 2:
     s.tmp_0 = sprites_createProjectileFromSide__P1990_mk(s);
-    r0 = s.b___6651.fields["img"];
+    r0 = s.b___28726.fields["img"];
     s.tmp_1 = r0;
     r0 = pxsim_ImageMethods.clone(s.tmp_1);
     s.tmp_0.arg0 = r0;
@@ -5811,10 +5811,10 @@ switch (step) {
     s.callLocIdx = 71; s.pc = 23; return s.tmp_0;
   case 23:
     r0 = s.retval;
-    s.bullet___6650 = (r0);
-    s.tmp_0 = Bullet_reset__P3983_mk(s);
+    s.bullet___28725 = (r0);
+    s.tmp_0 = Bullet_reset__P28750_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.bullet___6650;
+    s.tmp_0.arg1 = s.bullet___28725;
     s.tmp_0.arg2 = 0;
     s.tmp_0.arg3 = 100;
     s.tmp_0.arg4 = 1;
@@ -5825,27 +5825,27 @@ switch (step) {
     s.callLocIdx = 72; s.pc = 24; return s.tmp_0;
   case 24:
     r0 = s.retval;
-    r0 = s.b___6651.fields["bulletoverlap"];
+    r0 = s.b___28726.fields["bulletoverlap"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != undefined);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = s.b___6651.fields["bulletoverlap"];
+    r0 = s.b___28726.fields["bulletoverlap"];
     s.tmp_2 = r0;
-    r0 = (s.bullet___6650).fields["overlapAct"] = (s.tmp_2);
+    r0 = (s.bullet___28725).fields["overlapAct"] = (s.tmp_2);
   case 3:
   case 4:
     r0 = s.arg0.fields["dir"];
-    s.dir___6686 = (r0);
-    r0 = (s.dir___6686 == undefined);
+    s.dir___28764 = (r0);
+    r0 = (s.dir___28764 == undefined);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
     r0 = 0;
     { step = 6; continue; }
   case 5:
-    r0 = s.dir___6686;
+    r0 = s.dir___28764;
   case 6:
     // jmp value (already in r0)
     s.tmp_1 = r0;
@@ -5858,9 +5858,9 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 57.3);
     s.arg4 = (r0);
-    r0 = (s.bullet___6650).fields["changeImg"] = (s.arg7);
+    r0 = (s.bullet___28725).fields["changeImg"] = (s.arg7);
     s.tmp_0 = Sprite_setPosition__P2092_mk(s);
-    s.tmp_0.arg0 = s.bullet___6650;
+    s.tmp_0.arg0 = s.bullet___28725;
     s.tmp_1 = r0 = s.arg2;
     s.tmp_3 = r0 = s.arg6;
     r0 = pxsim.Math_.cos(s.arg4);
@@ -5881,7 +5881,7 @@ switch (step) {
   case 25:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P2093_mk(s);
-    s.tmp_0.arg0 = s.bullet___6650;
+    s.tmp_0.arg0 = s.bullet___28725;
     s.tmp_1 = r0 = s.arg5;
     r0 = pxsim.Math_.cos(s.arg4);
     s.tmp_2 = r0;
@@ -5895,8 +5895,8 @@ switch (step) {
     s.callLocIdx = 74; s.pc = 26; return s.tmp_0;
   case 26:
     r0 = s.retval;
-    s.tmp_0 = Bullet_changeImg__P3984_mk(s);
-    s.tmp_0.arg0 = s.bullet___6650;
+    s.tmp_0 = Bullet_changeImg__P28815_mk(s);
+    s.tmp_0.arg0 = s.bullet___28725;
     s.callLocIdx = 75; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
@@ -5907,7 +5907,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 7; continue; }
     s.tmp_2 = Sprite_setKind__P2091_mk(s);
-    s.tmp_2.arg0 = s.bullet___6650;
+    s.tmp_2.arg0 = s.bullet___28725;
     s.tmp_2.arg1 = globals.PlayerBullet___4040;
     s.callLocIdx = 77; s.pc = 28; return s.tmp_2;
   case 28:
@@ -5915,21 +5915,21 @@ switch (step) {
     { step = 16; continue; }
   case 7:
     r0 = s.arg0.fields["attachBullet"];
-    s.atc___6747 = (r0);
-    r0 = (s.atc___6747 != null);
+    s.atc___28825 = (r0);
+    r0 = (s.atc___28825 != null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 8; continue; }
     r0 = s.tmp_0;
     { step = 9; continue; }
   case 8:
-    r0 = (s.atc___6747 != undefined);
+    r0 = (s.atc___28825 != undefined);
   case 9:
     // jmp value (already in r0)
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 10; continue; }
-    r0 = pxsim_Array__push(s.atc___6747, s.bullet___6650);
+    r0 = pxsim_Array__push(s.atc___28825, s.bullet___28725);
   case 10:
   case 11:
     r0 = s.arg0.fields["_kind"];
@@ -5950,7 +5950,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 14; continue; }
     s.tmp_4 = Sprite_setKind__P2091_mk(s);
-    s.tmp_4.arg0 = s.bullet___6650;
+    s.tmp_4.arg0 = s.bullet___28725;
     s.tmp_4.arg1 = globals.PlayerBullet___4040;
     s.callLocIdx = 80; s.pc = 29; return s.tmp_4;
   case 29:
@@ -5958,7 +5958,7 @@ switch (step) {
     { step = 15; continue; }
   case 14:
     s.tmp_0 = Sprite_setKind__P2091_mk(s);
-    s.tmp_0.arg0 = s.bullet___6650;
+    s.tmp_0.arg0 = s.bullet___28725;
     s.tmp_0.arg1 = globals.EnemyBullet___4043;
     s.callLocIdx = 81; s.pc = 30; return s.tmp_0;
   case 30:
@@ -5969,14 +5969,14 @@ switch (step) {
     s.tmp_0 = r0;
     s.tmp_1 = Helper_Request_constructor__P3797_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.bullet___6650;
+    s.tmp_1.arg1 = s.bullet___28725;
     s.callLocIdx = 82; s.pc = 31; return s.tmp_1;
   case 31:
     r0 = s.retval;
     globals.currentRequest___3803 = (s.tmp_0);
     s.tmp_0 = if_cb_2_mk(s);
-    s.tmp_0.arg0 = s.b___6651;
-    s.tmp_0.arg1 = s.bullet___6650;
+    s.tmp_0.arg0 = s.b___28726;
+    s.tmp_0.arg1 = s.bullet___28725;
     if (!s.tmp_0.arg0.vtable.iface) {
       setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "cb"), 2);
       s.callLocIdx = 83; s.pc = 32; return s.tmp_0;
@@ -5992,13 +5992,13 @@ switch (step) {
     s.callLocIdx = 84; s.pc = 33; return s.tmp_0;
   case 33:
     r0 = s.retval;
-    r0 = s.bullet___6650.fields["prism"];
+    r0 = s.bullet___28725.fields["prism"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    r0 = (s.bullet___6650).fields["changeImg"] = (false);
-    s.tmp_0 = Bullet_shootprism__P6794_mk(s);
-    s.tmp_0.arg0 = s.bullet___6650;
+    r0 = (s.bullet___28725).fields["changeImg"] = (false);
+    s.tmp_0 = Bullet_shootprism__P28871_mk(s);
+    s.tmp_0.arg0 = s.bullet___28725;
     r0 = (s.arg4 * 57.3);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 85; s.pc = 34; return s.tmp_0;
@@ -6011,12 +6011,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_shoot__P3960.info = {"start":1563,"length":1563,"line":53,"column":4,"endLine":95,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"shoot","argumentNames":["p","name","x","y","a","s","d","f"]}
+Bullet_shoot__P28716.info = {"start":1563,"length":1563,"line":53,"column":4,"endLine":95,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"shoot","argumentNames":["p","name","x","y","a","s","d","f"]}
 
-function Bullet_shoot__P3960_mk(s) {
+function Bullet_shoot__P28716_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_shoot__P3960, depth: s.depth + 1,
+        parent: s, fn: Bullet_shoot__P28716, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6027,10 +6027,10 @@ function Bullet_shoot__P3960_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  bullet___6650: undefined,
-  b___6651: undefined,
-  dir___6686: undefined,
-  atc___6747: undefined,
+  bullet___28725: undefined,
+  b___28726: undefined,
+  dir___28764: undefined,
+  atc___28825: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -6045,7 +6045,7 @@ function Bullet_shoot__P3960_mk(s) {
 
 
 
-function Bullet_shootprism__P6794(s) {
+function Bullet_shootprism__P28871(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6055,10 +6055,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.line___7125 = undefined;
-    s.x___7134 = undefined;
-    s.y___7137 = undefined;
-    s.clock___7147 = undefined;
+    s.line___29202 = undefined;
+    s.x___29212 = undefined;
+    s.y___29215 = undefined;
+    s.clock___29225 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -6082,34 +6082,34 @@ switch (step) {
     r0 = (s.tmp_3 * 2);
     s.tmp_2 = r0;
     r0 = pxsim.image.create(s.tmp_0, s.tmp_2);
-    s.line___7125 = (r0);
+    s.line___29202 = (r0);
     s.tmp_0 = Sprite_x__P2045_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 96; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.x___7134 = (r0);
+    s.x___29212 = (r0);
     s.tmp_0 = Sprite_y__P2047_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 97; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.y___7137 = (r0);
+    s.y___29215 = (r0);
     s.tmp_0 = Sprite_setImage__P2076_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.line___7125;
+    s.tmp_0.arg1 = s.line___29202;
     s.callLocIdx = 98; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P2092_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.x___7134;
-    s.tmp_0.arg2 = s.y___7137;
+    s.tmp_0.arg1 = s.x___29212;
+    s.tmp_0.arg2 = s.y___29215;
     s.callLocIdx = 99; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = Bullet_drawPrism__P6798_mk(s);
-    s.tmp_0.arg0 = s.line___7125;
+    s.tmp_0 = Bullet_drawPrism__P28875_mk(s);
+    s.tmp_0.arg0 = s.line___29202;
     r0 = s.arg0.fields["prismLength"];
     s.tmp_0.arg1 = r0;
     r0 = (s.arg1 / 57.3);
@@ -6127,21 +6127,21 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_shootprism__P6794.info = {"start":5833,"length":371,"line":168,"column":4,"endLine":178,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"shootprism","argumentNames":["b","a"]}
+Bullet_shootprism__P28871.info = {"start":5833,"length":371,"line":168,"column":4,"endLine":178,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"shootprism","argumentNames":["b","a"]}
 
-function Bullet_shootprism__P6794_mk(s) {
+function Bullet_shootprism__P28871_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_shootprism__P6794, depth: s.depth + 1,
+        parent: s, fn: Bullet_shootprism__P28871, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  line___7125: undefined,
-  x___7134: undefined,
-  y___7137: undefined,
-  clock___7147: undefined,
+  line___29202: undefined,
+  x___29212: undefined,
+  y___29215: undefined,
+  clock___29225: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -6150,7 +6150,7 @@ function Bullet_shootprism__P6794_mk(s) {
 
 
 
-function Bullet_drawPrism__P6798(s) {
+function Bullet_drawPrism__P28875(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6160,19 +6160,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.boldLine___6805 = undefined;
-    s.drawBoundary___6818 = undefined;
-    s.stk___6975 = undefined;
-    s.cx___6983 = undefined;
-    s.cy___6986 = undefined;
-    s.x___6996 = undefined;
-    s.y___6997 = undefined;
-    s.rightX___7004 = undefined;
-    s.leftX___7024 = undefined;
-    s.i___7043 = undefined;
-    s.unfilled___7049 = undefined;
-    s.y0___7067 = undefined;
-    s.x0___7071 = undefined;
+    s.boldLine___28882 = undefined;
+    s.drawBoundary___28895 = undefined;
+    s.stk___29052 = undefined;
+    s.cx___29060 = undefined;
+    s.cy___29063 = undefined;
+    s.x___29073 = undefined;
+    s.y___29074 = undefined;
+    s.rightX___29081 = undefined;
+    s.leftX___29101 = undefined;
+    s.i___29120 = undefined;
+    s.unfilled___29126 = undefined;
+    s.y0___29144 = undefined;
+    s.x0___29148 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -6186,17 +6186,17 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.arg5);
     s.arg5 = (s.tmp_0);
-    r0 = pxsim_pxtcore_mkAction(2, inline__P6806);
+    r0 = pxsim_pxtcore_mkAction(2, inline__P28883);
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.arg0);
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 1, s.arg4);
-    s.boldLine___6805 = (s.tmp_1);
-    r0 = pxsim_pxtcore_mkAction(3, drawBoundary__P6818);
+    s.boldLine___28882 = (s.tmp_1);
+    r0 = pxsim_pxtcore_mkAction(3, drawBoundary__P28895);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.boldLine___6805);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.boldLine___28882);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.arg0);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.arg4);
-    s.drawBoundary___6818 = (s.tmp_0);
+    s.drawBoundary___28895 = (s.tmp_0);
     s.tmp_2 = r0 = s.arg4;
     r0 = pxsim_pxtrt_ldlocRef(s.arg5);
     s.tmp_3 = r0;
@@ -6221,7 +6221,7 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     s.tmp_2 = lambda_4_mk(s);
-    s.tmp_2.argL = s.drawBoundary___6818;
+    s.tmp_2.argL = s.drawBoundary___28895;
     r0 = (s.arg1 - 1);
     s.tmp_2.arg0 = r0;
     r0 = (s.arg3 / 2);
@@ -6233,100 +6233,100 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_1);
-    s.stk___6975 = (s.tmp_0);
-    r0 = pxsim_Array__getAt(s.stk___6975, 0);
+    s.stk___29052 = (s.tmp_0);
+    r0 = pxsim_Array__getAt(s.stk___29052, 0);
     s.tmp_0 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, 0);
-    s.cx___6983 = (r0);
-    r0 = pxsim_Array__getAt(s.stk___6975, 0);
+    s.cx___29060 = (r0);
+    r0 = pxsim_Array__getAt(s.stk___29052, 0);
     s.tmp_0 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, 1);
-    s.cy___6986 = (r0);
+    s.cy___29063 = (r0);
   case 5:
-    r0 = pxsim_Array__length(s.stk___6975);
+    r0 = pxsim_Array__length(s.stk___29052);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 22; continue; }
-    r0 = pxsim_Array_.removeAt(s.stk___6975, 0);
+    r0 = pxsim_Array_.removeAt(s.stk___29052, 0);
     s.tmp_2 = r0;
     r0 = pxsim_Array__getAt(s.tmp_2, 0);
-    s.x___6996 = (r0);
+    s.x___29073 = (r0);
     r0 = pxsim_Array__getAt(s.tmp_2, 1);
-    s.y___6997 = (r0);
+    s.y___29074 = (r0);
     s.tmp_0 = r0 = s.arg0;
-    s.tmp_1 = r0 = s.x___6996;
-    s.tmp_2 = r0 = s.y___6997;
+    s.tmp_1 = r0 = s.x___29073;
+    s.tmp_2 = r0 = s.y___29074;
     r0 = pxsim_pxtrt_ldlocRef(s.arg5);
     s.tmp_3 = r0;
     r0 = pxsim_ImageMethods.setPixel(s.tmp_0, s.tmp_1, s.tmp_2, s.tmp_3);
-    s.rightX___7004 = (s.x___6996);
+    s.rightX___29081 = (s.x___29073);
   case 6:
     s.tmp_2 = r0 = s.arg0;
-    r0 = (s.rightX___7004 + 1);
+    r0 = (s.rightX___29081 + 1);
     s.tmp_3 = r0;
-    r0 = pxsim_ImageMethods.getPixel(s.tmp_2, s.tmp_3, s.y___6997);
+    r0 = pxsim_ImageMethods.getPixel(s.tmp_2, s.tmp_3, s.y___29074);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != s.arg4);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 7; continue; }
-    r0 = (s.rightX___7004 + 1);
+    r0 = (s.rightX___29081 + 1);
     s.tmp_4 = r0;
-    s.rightX___7004 = (r0);
+    s.rightX___29081 = (r0);
     s.tmp_5 = r0 = s.arg0;
-    s.tmp_6 = r0 = s.y___6997;
+    s.tmp_6 = r0 = s.y___29074;
     r0 = pxsim_pxtrt_ldlocRef(s.arg5);
     s.tmp_7 = r0;
     r0 = pxsim_ImageMethods.setPixel(s.tmp_5, s.tmp_4, s.tmp_6, s.tmp_7);
     { step = 6; continue; }
   case 7:
-    s.leftX___7024 = (s.x___6996);
+    s.leftX___29101 = (s.x___29073);
   case 8:
     s.tmp_2 = r0 = s.arg0;
-    r0 = (s.leftX___7024 - 1);
+    r0 = (s.leftX___29101 - 1);
     s.tmp_3 = r0;
-    r0 = pxsim_ImageMethods.getPixel(s.tmp_2, s.tmp_3, s.y___6997);
+    r0 = pxsim_ImageMethods.getPixel(s.tmp_2, s.tmp_3, s.y___29074);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != s.arg4);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 9; continue; }
-    r0 = (s.leftX___7024 - 1);
+    r0 = (s.leftX___29101 - 1);
     s.tmp_4 = r0;
-    s.leftX___7024 = (r0);
+    s.leftX___29101 = (r0);
     s.tmp_5 = r0 = s.arg0;
-    s.tmp_6 = r0 = s.y___6997;
+    s.tmp_6 = r0 = s.y___29074;
     r0 = pxsim_pxtrt_ldlocRef(s.arg5);
     s.tmp_7 = r0;
     r0 = pxsim_ImageMethods.setPixel(s.tmp_5, s.tmp_4, s.tmp_6, s.tmp_7);
     { step = 8; continue; }
   case 9:
-    s.i___7043 = (-1);
+    s.i___29120 = (-1);
   case 10:
-    r0 = (s.i___7043 < 2);
+    r0 = (s.i___29120 < 2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 21; continue; }
-    r0 = pxsim_pxtcore_mkAction(3, unfilled__P7049);
+    r0 = pxsim_pxtcore_mkAction(3, unfilled__P29126);
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.arg0);
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 1, s.arg4);
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 2, s.arg5);
-    s.unfilled___7049 = (s.tmp_1);
-    r0 = (s.y___6997 + s.i___7043);
-    s.y0___7067 = (r0);
-    s.x0___7071 = (s.leftX___7024);
+    s.unfilled___29126 = (s.tmp_1);
+    r0 = (s.y___29074 + s.i___29120);
+    s.y0___29144 = (r0);
+    s.x0___29148 = (s.leftX___29101);
   case 11:
-    r0 = (s.x0___7071 <= s.rightX___7004);
+    r0 = (s.x0___29148 <= s.rightX___29081);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 16; continue; }
     s.tmp_2 = lambda_3_mk(s);
-    s.tmp_2.argL = s.unfilled___7049;
-    s.tmp_2.arg0 = s.x0___7071;
-    s.tmp_2.arg1 = s.y0___7067;
+    s.tmp_2.argL = s.unfilled___29126;
+    s.tmp_2.arg0 = s.x0___29148;
+    s.tmp_2.arg1 = s.y0___29144;
     setupLambda(s.tmp_2, s.tmp_2.argL);
     s.callLocIdx = 91; s.pc = 24; return s.tmp_2;
   case 24:
@@ -6338,10 +6338,10 @@ switch (step) {
     { step = 13; continue; }
   case 12:
     s.tmp_5 = lambda_3_mk(s);
-    s.tmp_5.argL = s.unfilled___7049;
-    r0 = (s.x0___7071 + 1);
+    s.tmp_5.argL = s.unfilled___29126;
+    r0 = (s.x0___29148 + 1);
     s.tmp_5.arg0 = r0;
-    s.tmp_5.arg1 = s.y0___7067;
+    s.tmp_5.arg1 = s.y0___29144;
     setupLambda(s.tmp_5, s.tmp_5.argL);
     s.callLocIdx = 92; s.pc = 25; return s.tmp_5;
   case 25:
@@ -6357,19 +6357,19 @@ switch (step) {
     if (!r0) { step = 14; continue; }
     r0 = pxsim_Array__mk();
     s.tmp_7 = r0;
-    r0 = pxsim_Array__push(s.tmp_7, s.x0___7071);
-    r0 = pxsim_Array__push(s.tmp_7, s.y0___7067);
-    r0 = pxsim_Array__push(s.stk___6975, s.tmp_7);
+    r0 = pxsim_Array__push(s.tmp_7, s.x0___29148);
+    r0 = pxsim_Array__push(s.tmp_7, s.y0___29144);
+    r0 = pxsim_Array__push(s.stk___29052, s.tmp_7);
   case 14:
   case 15:
-    r0 = (s.x0___7071 + 1);
-    s.x0___7071 = (r0);
+    r0 = (s.x0___29148 + 1);
+    s.x0___29148 = (r0);
     { step = 11; continue; }
   case 16:
     s.tmp_1 = lambda_3_mk(s);
-    s.tmp_1.argL = s.unfilled___7049;
-    s.tmp_1.arg0 = s.rightX___7004;
-    s.tmp_1.arg1 = s.y0___7067;
+    s.tmp_1.argL = s.unfilled___29126;
+    s.tmp_1.arg0 = s.rightX___29081;
+    s.tmp_1.arg1 = s.y0___29144;
     setupLambda(s.tmp_1, s.tmp_1.argL);
     s.callLocIdx = 93; s.pc = 26; return s.tmp_1;
   case 26:
@@ -6381,10 +6381,10 @@ switch (step) {
     { step = 18; continue; }
   case 17:
     s.tmp_2 = lambda_3_mk(s);
-    s.tmp_2.argL = s.unfilled___7049;
-    r0 = (s.rightX___7004 + 1);
+    s.tmp_2.argL = s.unfilled___29126;
+    r0 = (s.rightX___29081 + 1);
     s.tmp_2.arg0 = r0;
-    s.tmp_2.arg1 = s.y0___7067;
+    s.tmp_2.arg1 = s.y0___29144;
     setupLambda(s.tmp_2, s.tmp_2.argL);
     s.callLocIdx = 94; s.pc = 27; return s.tmp_2;
   case 27:
@@ -6396,13 +6396,13 @@ switch (step) {
     if (!r0) { step = 19; continue; }
     r0 = pxsim_Array__mk();
     s.tmp_4 = r0;
-    r0 = pxsim_Array__push(s.tmp_4, s.rightX___7004);
-    r0 = pxsim_Array__push(s.tmp_4, s.y0___7067);
-    r0 = pxsim_Array__push(s.stk___6975, s.tmp_4);
+    r0 = pxsim_Array__push(s.tmp_4, s.rightX___29081);
+    r0 = pxsim_Array__push(s.tmp_4, s.y0___29144);
+    r0 = pxsim_Array__push(s.stk___29052, s.tmp_4);
   case 19:
   case 20:
-    r0 = (s.i___7043 + 2);
-    s.i___7043 = (r0);
+    r0 = (s.i___29120 + 2);
+    s.i___29120 = (r0);
     { step = 10; continue; }
   case 21:
     { step = 5; continue; }
@@ -6411,12 +6411,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_drawPrism__P6798.info = {"start":3132,"length":2695,"line":97,"column":4,"endLine":166,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"drawPrism","argumentNames":["line","c","angle","width","color","centColor"]}
+Bullet_drawPrism__P28875.info = {"start":3132,"length":2695,"line":97,"column":4,"endLine":166,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"drawPrism","argumentNames":["line","c","angle","width","color","centColor"]}
 
-function Bullet_drawPrism__P6798_mk(s) {
+function Bullet_drawPrism__P28875_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_drawPrism__P6798, depth: s.depth + 1,
+        parent: s, fn: Bullet_drawPrism__P28875, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6426,19 +6426,19 @@ function Bullet_drawPrism__P6798_mk(s) {
   tmp_5: undefined,
   tmp_6: undefined,
   tmp_7: undefined,
-  boldLine___6805: undefined,
-  drawBoundary___6818: undefined,
-  stk___6975: undefined,
-  cx___6983: undefined,
-  cy___6986: undefined,
-  x___6996: undefined,
-  y___6997: undefined,
-  rightX___7004: undefined,
-  leftX___7024: undefined,
-  i___7043: undefined,
-  unfilled___7049: undefined,
-  y0___7067: undefined,
-  x0___7071: undefined,
+  boldLine___28882: undefined,
+  drawBoundary___28895: undefined,
+  stk___29052: undefined,
+  cx___29060: undefined,
+  cy___29063: undefined,
+  x___29073: undefined,
+  y___29074: undefined,
+  rightX___29081: undefined,
+  leftX___29101: undefined,
+  i___29120: undefined,
+  unfilled___29126: undefined,
+  y0___29144: undefined,
+  x0___29148: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -6451,7 +6451,7 @@ function Bullet_drawPrism__P6798_mk(s) {
 
 
 
-function inline__P6806(s) {
+function inline__P28883(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6482,12 +6482,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P6806.info = {"start":3275,"length":264,"line":99,"column":23,"endLine":104,"endColumn":9,"fileName":"maze-projectile-ext.ts","functionName":"inline","argumentNames":["x0","y0","x","y"]}
+inline__P28883.info = {"start":3275,"length":264,"line":99,"column":23,"endLine":104,"endColumn":9,"fileName":"maze-projectile-ext.ts","functionName":"inline","argumentNames":["x0","y0","x","y"]}
 
-function inline__P6806_mk(s) {
+function inline__P28883_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P6806, depth: s.depth + 1,
+        parent: s, fn: inline__P28883, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -6500,7 +6500,7 @@ function inline__P6806_mk(s) {
 
 
 
-function drawBoundary__P6818(s) {
+function drawBoundary__P28895(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6510,10 +6510,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sint___6822 = undefined;
-    s.cost___6826 = undefined;
-    s.centx0___6927 = undefined;
-    s.centy0___6945 = undefined;
+    s.sint___28899 = undefined;
+    s.cost___28903 = undefined;
+    s.centx0___29004 = undefined;
+    s.centy0___29022 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -6521,37 +6521,37 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = pxsim.Math_.sin(s.arg2);
-    s.sint___6822 = (r0);
+    s.sint___28899 = (r0);
     r0 = pxsim.Math_.cos(s.arg2);
-    s.cost___6826 = (r0);
+    s.cost___28903 = (r0);
   case 1:
     s.tmp_0 = lambda_5_mk(s);
     s.tmp_0.argL = s.caps[0];
     s.tmp_1 = r0 = s.arg0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0.arg0 = r0;
     s.tmp_3 = r0 = s.arg0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 + s.tmp_4);
     s.tmp_0.arg1 = r0;
     s.tmp_6 = r0 = s.arg0;
-    r0 = (s.arg0 * s.cost___6826);
+    r0 = (s.arg0 * s.cost___28903);
     s.tmp_7 = r0;
     r0 = (s.tmp_6 + s.tmp_7);
     s.tmp_5 = r0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_8 = r0;
     r0 = (s.tmp_5 - s.tmp_8);
     s.tmp_0.arg2 = r0;
     s.tmp_10 = r0 = s.arg0;
-    r0 = (s.arg0 * s.sint___6822);
+    r0 = (s.arg0 * s.sint___28899);
     s.tmp_11 = r0;
     r0 = (s.tmp_10 + s.tmp_11);
     s.tmp_9 = r0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_12 = r0;
     r0 = (s.tmp_9 + s.tmp_12);
     s.tmp_0.arg3 = r0;
@@ -6570,22 +6570,22 @@ switch (step) {
     s.tmp_1 = helpers_imageDrawLine__P1743_mk(s);
     s.tmp_1.arg0 = s.caps[1];
     s.tmp_2 = r0 = s.arg0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 - s.tmp_3);
     s.tmp_1.arg1 = r0;
     s.tmp_4 = r0 = s.arg0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_1.arg2 = r0;
     s.tmp_6 = r0 = s.arg0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_7 = r0;
     r0 = (s.tmp_6 + s.tmp_7);
     s.tmp_1.arg3 = r0;
     s.tmp_8 = r0 = s.arg0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_9 = r0;
     r0 = (s.tmp_8 - s.tmp_9);
     s.tmp_1.arg4 = r0;
@@ -6596,38 +6596,38 @@ switch (step) {
     s.tmp_0 = helpers_imageDrawLine__P1743_mk(s);
     s.tmp_0.arg0 = s.caps[1];
     s.tmp_2 = r0 = s.arg0;
-    r0 = (s.arg0 * s.cost___6826);
+    r0 = (s.arg0 * s.cost___28903);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 + s.tmp_3);
     s.tmp_1 = r0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_4 = r0;
     r0 = (s.tmp_1 - s.tmp_4);
     s.tmp_0.arg1 = r0;
     s.tmp_6 = r0 = s.arg0;
-    r0 = (s.arg0 * s.sint___6822);
+    r0 = (s.arg0 * s.sint___28899);
     s.tmp_7 = r0;
     r0 = (s.tmp_6 + s.tmp_7);
     s.tmp_5 = r0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_8 = r0;
     r0 = (s.tmp_5 + s.tmp_8);
     s.tmp_0.arg2 = r0;
     s.tmp_10 = r0 = s.arg0;
-    r0 = (s.arg0 * s.cost___6826);
+    r0 = (s.arg0 * s.cost___28903);
     s.tmp_11 = r0;
     r0 = (s.tmp_10 + s.tmp_11);
     s.tmp_9 = r0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_12 = r0;
     r0 = (s.tmp_9 + s.tmp_12);
     s.tmp_0.arg3 = r0;
     s.tmp_14 = r0 = s.arg0;
-    r0 = (s.arg0 * s.sint___6822);
+    r0 = (s.arg0 * s.sint___28899);
     s.tmp_15 = r0;
     r0 = (s.tmp_14 + s.tmp_15);
     s.tmp_13 = r0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_16 = r0;
     r0 = (s.tmp_13 - s.tmp_16);
     s.tmp_0.arg4 = r0;
@@ -6636,53 +6636,53 @@ switch (step) {
   case 5:
     r0 = s.retval;
     s.tmp_4 = r0 = s.arg0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_5 = r0;
     r0 = (s.tmp_4 - s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + s.arg0);
     s.tmp_2 = r0;
-    r0 = (s.arg0 * s.cost___6826);
+    r0 = (s.arg0 * s.cost___28903);
     s.tmp_6 = r0;
     r0 = (s.tmp_2 + s.tmp_6);
     s.tmp_1 = r0;
-    r0 = (s.arg1 * s.sint___6822);
+    r0 = (s.arg1 * s.sint___28899);
     s.tmp_7 = r0;
     r0 = (s.tmp_1 + s.tmp_7);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 1);
-    s.centx0___6927 = (r0);
+    s.centx0___29004 = (r0);
     s.tmp_4 = r0 = s.arg0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_5 = r0;
     r0 = (s.tmp_4 + s.tmp_5);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + s.arg0);
     s.tmp_2 = r0;
-    r0 = (s.arg0 * s.sint___6822);
+    r0 = (s.arg0 * s.sint___28899);
     s.tmp_6 = r0;
     r0 = (s.tmp_2 + s.tmp_6);
     s.tmp_1 = r0;
-    r0 = (s.arg1 * s.cost___6826);
+    r0 = (s.arg1 * s.cost___28903);
     s.tmp_7 = r0;
     r0 = (s.tmp_1 - s.tmp_7);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 1);
-    s.centy0___6945 = (r0);
+    s.centy0___29022 = (r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.centx0___6927);
-    r0 = pxsim_Array__push(s.tmp_0, s.centy0___6945);
+    r0 = pxsim_Array__push(s.tmp_0, s.centx0___29004);
+    r0 = pxsim_Array__push(s.tmp_0, s.centy0___29022);
     r0 = s.tmp_0;
     return leave(s, r0)
   default: oops()
 } } }
-drawBoundary__P6818.info = {"start":3548,"length":802,"line":105,"column":8,"endLine":120,"endColumn":9,"fileName":"maze-projectile-ext.ts","functionName":"drawBoundary","argumentNames":["l","radius","angle"]}
+drawBoundary__P28895.info = {"start":3548,"length":802,"line":105,"column":8,"endLine":120,"endColumn":9,"fileName":"maze-projectile-ext.ts","functionName":"drawBoundary","argumentNames":["l","radius","angle"]}
 
-function drawBoundary__P6818_mk(s) {
+function drawBoundary__P28895_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: drawBoundary__P6818, depth: s.depth + 1,
+        parent: s, fn: drawBoundary__P28895, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6701,10 +6701,10 @@ function drawBoundary__P6818_mk(s) {
   tmp_14: undefined,
   tmp_15: undefined,
   tmp_16: undefined,
-  sint___6822: undefined,
-  cost___6826: undefined,
-  centx0___6927: undefined,
-  centy0___6945: undefined,
+  sint___28899: undefined,
+  cost___28903: undefined,
+  centx0___29004: undefined,
+  centy0___29022: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -6714,7 +6714,7 @@ function drawBoundary__P6818_mk(s) {
 
 
 
-function unfilled__P7049(s) {
+function unfilled__P29126(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6750,12 +6750,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-unfilled__P7049.info = {"start":5185,"length":181,"line":149,"column":16,"endLine":152,"endColumn":17,"fileName":"maze-projectile-ext.ts","functionName":"unfilled","argumentNames":["x0","y0"]}
+unfilled__P29126.info = {"start":5185,"length":181,"line":149,"column":16,"endLine":152,"endColumn":17,"fileName":"maze-projectile-ext.ts","functionName":"unfilled","argumentNames":["x0","y0"]}
 
-function unfilled__P7049_mk(s) {
+function unfilled__P29126_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: unfilled__P7049, depth: s.depth + 1,
+        parent: s, fn: unfilled__P29126, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7219,7 +7219,7 @@ function Sprite_kind__P2090_mk(s) {
 
 
 
-function Bullet_changeImg__P3984(s) {
+function Bullet_changeImg__P28815(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7229,7 +7229,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.angle___7243 = undefined;
+    s.angle___29338 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -7253,19 +7253,19 @@ switch (step) {
     r0 = (s.tmp_1 + 360);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 % 360);
-    s.angle___7243 = (r0);
+    s.angle___29338 = (r0);
     r0 = s.arg0.fields["changeImg"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
-    r0 = (s.angle___7243 > 45);
+    r0 = (s.angle___29338 > 45);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBool(s.tmp_1);
     if (r0) { step = 1; continue; }
     r0 = s.tmp_1;
     { step = 2; continue; }
   case 1:
-    r0 = (s.angle___7243 <= 135);
+    r0 = (s.angle___29338 <= 135);
   case 2:
     // jmp value (already in r0)
     s.tmp_2 = r0;
@@ -7288,14 +7288,14 @@ switch (step) {
     r0 = (s.arg0).fields["dir"] = (0);
     { step = 12; continue; }
   case 3:
-    r0 = (s.angle___7243 > 135);
+    r0 = (s.angle___29338 > 135);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 4; continue; }
     r0 = s.tmp_0;
     { step = 5; continue; }
   case 4:
-    r0 = (s.angle___7243 <= 225);
+    r0 = (s.angle___29338 <= 225);
   case 5:
     // jmp value (already in r0)
     s.tmp_1 = r0;
@@ -7318,14 +7318,14 @@ switch (step) {
     r0 = (s.arg0).fields["dir"] = (1);
     { step = 11; continue; }
   case 6:
-    r0 = (s.angle___7243 > 225);
+    r0 = (s.angle___29338 > 225);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 7; continue; }
     r0 = s.tmp_0;
     { step = 8; continue; }
   case 7:
-    r0 = (s.angle___7243 <= 315);
+    r0 = (s.angle___29338 <= 315);
   case 8:
     // jmp value (already in r0)
     s.tmp_1 = r0;
@@ -7365,12 +7365,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_changeImg__P3984.info = {"start":8279,"length":827,"line":234,"column":4,"endLine":254,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"changeImg","argumentNames":["bullet"]}
+Bullet_changeImg__P28815.info = {"start":8279,"length":827,"line":234,"column":4,"endLine":254,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"changeImg","argumentNames":["bullet"]}
 
-function Bullet_changeImg__P3984_mk(s) {
+function Bullet_changeImg__P28815_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_changeImg__P3984, depth: s.depth + 1,
+        parent: s, fn: Bullet_changeImg__P28815, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7379,7 +7379,7 @@ function Bullet_changeImg__P3984_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  angle___7243: undefined,
+  angle___29338: undefined,
   arg0: undefined,
 } }
 
@@ -8269,7 +8269,7 @@ function PhysicsEngine_moveSprite__P2185_mk(s) {
 
 
 
-function Bullet_reset__P3983(s) {
+function Bullet_reset__P28750(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8279,7 +8279,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___7203 = undefined;
+    s.i___29294 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -8306,17 +8306,17 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["overlapAct"] = (s.tmp_1);
-    s.i___7203 = (0);
+    s.i___29294 = (0);
   case 1:
-    r0 = (s.i___7203 < 4);
+    r0 = (s.i___29294 < 4);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
     r0 = s.arg1.fields["overlapAct"];
     s.tmp_1 = r0;
-    r0 = pxsim_Array__push(s.tmp_1, inline__P7211);
-    r0 = (s.i___7203 + 1);
-    s.i___7203 = (r0);
+    r0 = pxsim_Array__push(s.tmp_1, inline__P29302);
+    r0 = (s.i___29294 + 1);
+    s.i___29294 = (r0);
     { step = 1; continue; }
   case 2:
     r0 = (s.arg1).fields["dir"] = (2);
@@ -8338,17 +8338,17 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Bullet_reset__P3983.info = {"start":7082,"length":1191,"line":205,"column":4,"endLine":232,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"reset","argumentNames":["owner","bullet","damage","hitrec","hurted","backoff","rebound","indeflectible","perishTogether"]}
+Bullet_reset__P28750.info = {"start":7082,"length":1191,"line":205,"column":4,"endLine":232,"endColumn":5,"fileName":"maze-projectile-ext.ts","functionName":"reset","argumentNames":["owner","bullet","damage","hitrec","hurted","backoff","rebound","indeflectible","perishTogether"]}
 
-function Bullet_reset__P3983_mk(s) {
+function Bullet_reset__P28750_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Bullet_reset__P3983, depth: s.depth + 1,
+        parent: s, fn: Bullet_reset__P28750, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  i___7203: undefined,
+  i___29294: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -8364,7 +8364,7 @@ function Bullet_reset__P3983_mk(s) {
 
 
 
-function inline__P7211(s) {
+function inline__P29302(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8383,12 +8383,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P7211.info = {"start":7813,"length":24,"line":220,"column":35,"endLine":220,"endColumn":59,"fileName":"maze-projectile-ext.ts","functionName":"inline","argumentNames":["s","o"]}
+inline__P29302.info = {"start":7813,"length":24,"line":220,"column":35,"endLine":220,"endColumn":59,"fileName":"maze-projectile-ext.ts","functionName":"inline","argumentNames":["s","o"]}
 
-function inline__P7211_mk(s) {
+function inline__P29302_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P7211, depth: s.depth + 1,
+        parent: s, fn: inline__P29302, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -42886,7 +42886,7 @@ const sprites_StaticObstacle__C2168_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["projectiles___6621","curEnemyRoom___4035","PlayerBullet___4040","PlayerWeapon___4041","PlayerServant___4042","EnemyBullet___4043","BOSS___4044","mySprite___4046","overlapFunc___6623"])
+const breakpoints = setupDebugger(1, ["projectiles___28692","curEnemyRoom___30423","PlayerBullet___4040","PlayerWeapon___4041","PlayerServant___4042","EnemyBullet___4043","BOSS___4044","mySprite___4046","overlapFunc___28694"])
 
-return _main___P20708
+return _main___P30840
 })

@@ -810,6 +810,10 @@ namespace Bullet{
     export let curEnemyRoom: {[key: string]: Sprite; } = {} //迷宫怪物
     export let curPlayer: Sprite = null //当前玩家
 
+    export function setCurPlayer(player: Sprite){
+        curPlayer = player
+    }
+
     function nearestPlayer(bullet: wave, d: number){
         let playerDis = Helper.distance(bullet, curPlayer)
         let e = playerDis <= d ? curPlayer : null
